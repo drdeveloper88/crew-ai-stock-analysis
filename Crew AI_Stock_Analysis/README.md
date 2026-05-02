@@ -97,42 +97,42 @@ The application follows a multi-agent architecture using CrewAI, with specialize
 ```mermaid
 graph TD
     subgraph "User Interface Layer"
-        A[User Input<br/>Stock Symbol(s)]
-        B[Streamlit Web App<br/>app.py]
-        M[Display Results<br/>in Streamlit UI]
+        A["User Input\nStock Symbol(s)"]
+        B["Streamlit Web App\napp.py"]
+        M["Display Results\nin Streamlit UI"]
     end
     
     subgraph "Application Logic Layer"
-        C[kickoff_stock Function<br/>crew.py]
-        N{Fallback Mechanisms}
+        C["kickoff_stock Function\ncrew.py"]
+        N["Fallback Mechanisms"]
     end
     
     subgraph "AI Orchestration Layer"
-        D[CrewAI Crew<br/>Orchestrator]
+        D["CrewAI Crew\nOrchestrator"]
     end
     
     subgraph "Agent Layer"
-        E[Financial Market Analyst Agent<br/>analyst_agent.py]
-        F[Trading Advisor Agent<br/>trader_agent.py]
+        E["Financial Market Analyst Agent\nanalyst_agent.py"]
+        F["Trading Advisor Agent\ntrader_agent.py"]
     end
     
     subgraph "Task Layer"
-        I[Stock Analysis Task<br/>analyse_task.py]
-        J[Trading Decision Task<br/>trade_task.py]
-        K[Future Prediction Task<br/>prediction_task.py]
+        I["Stock Analysis Task\nanalyse_task.py"]
+        J["Trading Decision Task\ntrade_task.py"]
+        K["Future Prediction Task\nprediction_task.py"]
     end
     
     subgraph "Tool Layer"
-        G[Stock Research Tool<br/>stock_research_tool.py]
+        G["Stock Research Tool\nstock_research_tool.py"]
     end
     
     subgraph "Data Layer"
-        H[Yahoo Finance API<br/>Real-time Data]
+        H["Yahoo Finance API\nReal-time Data"]
     end
     
     subgraph "Fallback Layer"
-        O[Reduced Token Models<br/>GPT-4o Mini / GPT-3.5]
-        P[Rule-based Fallback<br/>No AI Inference]
+        O["Reduced Token Models\nGPT-4o Mini / GPT-3.5"]
+        P["Rule-based Fallback\nNo AI Inference"]
     end
     
     A --> B
@@ -147,7 +147,7 @@ graph TD
     J --> G
     K --> G
     G --> H
-    I --> L[Analysis Results]
+    I --> L["Analysis Results"]
     J --> L
     K --> L
     L --> M
