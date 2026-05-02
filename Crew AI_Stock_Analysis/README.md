@@ -92,6 +92,8 @@ The application follows a multi-agent architecture using CrewAI, with specialize
 
 ### System Architecture
 
+> 📋 **Interactive Diagram**: Open [`architecture_diagram.html`](architecture_diagram.html) in your browser for a fully interactive, visually enhanced version of this diagram.
+
 ```mermaid
 graph TD
     subgraph "User Interface Layer"
